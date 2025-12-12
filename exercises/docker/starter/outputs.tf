@@ -8,3 +8,12 @@
 # Hint: Reference your resources and variables
 
 # TODO: Define your outputs here
+output "network_name" {
+  value = docker_network.challenge_net.name
+}
+output "nginx_container_id" {
+  value = docker_container.nginx.id
+}
+output "nginx_url" {
+  value = "http://localhost:${var.nginx_external_port}"
+}

@@ -8,3 +8,15 @@
 # Hint: Give them sensible defaults
 
 # TODO: Define your variables here
+variable "nginx_container_name" {
+  type    = string
+  default = "nginx"
+}
+variable "redis_container_name" {
+  type    = string
+  default = "redis"
+}
+variable "nginx_external_port" {
+  type    = number
+  default = 80
+}
