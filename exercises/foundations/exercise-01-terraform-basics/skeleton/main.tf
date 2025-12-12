@@ -5,23 +5,22 @@
 # Required version: >= 1.9.0
 # Required provider: aws from hashicorp/aws, version ~> 5.0
 
-# terraform {
-#   required_version = "???"
-#
-#   required_providers {
-#     ??? = {
-#       source  = "???"
-#       version = "???"
-#     }
-#   }
-# }
+terraform {
+  required_version = ">= 1.9.0"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
 
 # TODO: Add provider block for AWS
 # Region: us-east-1
 
-# provider "???" {
-#   region = "???"
-# }
+provider "aws" {
+  region = "us-east-1"
+}
 
 # TODO: Add resource block for S3 bucket
 # Resource type: aws_s3_bucket
@@ -29,15 +28,15 @@
 # Bucket name: terraform-gym-first-YOURNAME (must be globally unique!)
 # Add tags: Name, Environment, ManagedBy
 
-# resource "aws_s3_bucket" "my_first_bucket" {
-#   bucket = "???"
-#
-#   tags = {
-#     Name        = "???"
-#     Environment = "???"
-#     ManagedBy   = "???"
-#   }
-# }
+resource "aws_s3_bucket" "my_first_bucket" {
+  bucket = "terraform-gym-first-almsid"
+
+  tags = {
+    Name        = "terraform-gym-first-almsid"
+    Environment = "dev"
+    ManagedBy   = "almsid"
+  }
+}
 
 # After completing:
 # 1. Run: terraform init

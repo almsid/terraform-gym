@@ -17,7 +17,8 @@ terraform {
 
 # TODO: Configure the Docker provider
 provider "docker" {
-  host = "unix:///var/run/docker.sock"
+  host = "unix:///run/user/1000/podman/podman.sock" # for my local server
+  # host = "unix:///var/run/docker.sock" #for docker, and not my local server
 }
 
 # TODO: Create a Docker network named "challenge-net"

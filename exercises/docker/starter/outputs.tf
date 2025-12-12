@@ -17,3 +17,10 @@ output "nginx_container_id" {
 output "nginx_url" {
   value = "http://localhost:${var.nginx_external_port}"
 }
+output "my_message" {
+  value = "Our team is awesome!"
+}
+
+output "z" {
+  value = file("${path.module}/kitten.txt")
+}
