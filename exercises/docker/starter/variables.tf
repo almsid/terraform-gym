@@ -18,5 +18,5 @@ variable "redis_container_name" {
 }
 variable "nginx_external_port" {
   type    = number
-  default = 80
+  default = 8080
 }
