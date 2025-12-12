@@ -1,0 +1,147 @@
+host:
+  arch: amd64
+  buildahVersion: 1.41.5
+  cgroupControllers:
+  - memory
+  - pids
+  cgroupManager: systemd
+  cgroupVersion: v2
+  conmon:
+    package: conmon-2.1.13-1.el9.x86_64
+    path: /usr/bin/conmon
+    version: 'conmon version 2.1.13, commit: c43412d7c176a718951f739dd9b744f3ac3348ed'
+  cpuUtilization:
+    idlePercent: 99.97
+    systemPercent: 0.02
+    userPercent: 0.01
+  cpus: 8
+  databaseBackend: sqlite
+  distribution:
+    distribution: rocky
+    version: "9.6"
+  eventLogger: journald
+  freeLocks: 2048
+  hostname: db-tf.onqa.local
+  idMappings:
+    gidmap:
+    - container_id: 0
+      host_id: 1000
+      size: 1
+    - container_id: 1
+      host_id: 100000
+      size: 65536
+    uidmap:
+    - container_id: 0
+      host_id: 1000
+      size: 1
+    - container_id: 1
+      host_id: 100000
+      size: 65536
+  kernel: 5.14.0-570.17.1.el9_6.x86_64
+  linkmode: dynamic
+  logDriver: journald
+  memFree: 437415936
+  memTotal: 1795129344
+  networkBackend: netavark
+  networkBackendInfo:
+    backend: netavark
+    dns:
+      package: aardvark-dns-1.16.0-1.el9.x86_64
+      path: /usr/libexec/podman/aardvark-dns
+      version: aardvark-dns 1.16.0
+    package: netavark-1.16.0-1.el9.x86_64
+    path: /usr/libexec/podman/netavark
+    version: netavark 1.16.0
+  ociRuntime:
+    name: crun
+    package: crun-1.23.1-2.el9_7.x86_64
+    path: /usr/bin/crun
+    version: |-
+      crun version 1.23.1
+      commit: d20b23dba05e822b93b82f2f34fd5dada433e0c2
+      rundir: /run/user/1000/crun
+      spec: 1.0.0
+      +SYSTEMD +SELINUX +APPARMOR +CAP +SECCOMP +EBPF +CRIU +YAJL
+  os: linux
+  pasta:
+    executable: /usr/bin/pasta
+    package: passt-0^20250512.g8ec1341-2.el9.x86_64
+    version: ""
+  remoteSocket:
+    exists: true
+    path: /run/user/1000/podman/podman.sock
+  rootlessNetworkCmd: pasta
+  security:
+    apparmorEnabled: false
+    capabilities: CAP_CHOWN,CAP_DAC_OVERRIDE,CAP_FOWNER,CAP_FSETID,CAP_KILL,CAP_NET_BIND_SERVICE,CAP_SETFCAP,CAP_SETGID,CAP_SETPCAP,CAP_SETUID,CAP_SYS_CHROOT
+    rootless: true
+    seccompEnabled: true
+    seccompProfilePath: /usr/share/containers/seccomp.json
+    selinuxEnabled: true
+  serviceIsRemote: false
+  slirp4netns:
+    executable: /usr/bin/slirp4netns
+    package: slirp4netns-1.3.3-1.el9.x86_64
+    version: |-
+      slirp4netns version 1.3.3
+      commit: 944fa94090e1fd1312232cbc0e6b43585553d824
+      libslirp: 4.4.0
+      SLIRP_CONFIG_VERSION_MAX: 3
+      libseccomp: 2.5.2
+  swapFree: 3999150080
+  swapTotal: 4236242944
+  uptime: 649h 45m 42.00s (Approximately 27.04 days)
+  variant: ""
+plugins:
+  authorization: null
+  log:
+  - k8s-file
+  - none
+  - passthrough
+  - journald
+  network:
+  - bridge
+  - macvlan
+  - ipvlan
+  volume:
+  - local
+registries:
+  search:
+  - registry.access.redhat.com
+  - registry.redhat.io
+  - docker.io
+store:
+  configFile: /home/mo/.config/containers/storage.conf
+  containerStore:
+    number: 0
+    paused: 0
+    running: 0
+    stopped: 0
+  graphDriverName: overlay
+  graphOptions: {}
+  graphRoot: /home/mo/.local/share/containers/storage
+  graphRootAllocated: 55192846336
+  graphRootUsed: 5979529216
+  graphStatus:
+    Backing Filesystem: xfs
+    Native Overlay Diff: "true"
+    Supports d_type: "true"
+    Supports shifting: "false"
+    Supports volatile: "true"
+    Using metacopy: "false"
+  imageCopyTmpDir: /var/tmp
+  imageStore:
+    number: 0
+  runRoot: /run/user/1000/containers
+  transientStore: false
+  volumePath: /home/mo/.local/share/containers/storage/volumes
+version:
+  APIVersion: 5.6.0
+  Built: 1763597873
+  BuiltTime: Wed Nov 19 19:17:53 2025
+  GitCommit: ""
+  GoVersion: go1.24.6 (Red Hat 1.24.6-1.el9_6)
+  Os: linux
+  OsArch: linux/amd64
+  Version: 5.6.0
+
