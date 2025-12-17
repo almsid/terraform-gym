@@ -32,12 +32,12 @@ resource "aws_s3_bucket" "example" {
   force_destroy = true
 
   tags = {
-    Name          = "Exercise 03 Data Sources Bucket"
-    Environment   = "Learning"
-    ManagedBy     = "Terraform"
-    AccountID     = data.aws_caller_identity.current.account_id
-    Region        = data.aws_region.current.name
-    AZCount       = length(data.aws_availability_zones.available.names)
-    FirstAZ       = data.aws_availability_zones.available.names[0]
+    Name        = "Exercise 03 Data Sources Bucket"
+    Environment = "Learning"
+    ManagedBy   = "Terraform"
+    AccountID   = data.aws_caller_identity.current.account_id
+    Region      = data.aws_region.current.name
+    AZCount     = length(data.aws_availability_zones.available.names)
+    FirstAZ     = data.aws_availability_zones.available.names[0]
   }
 }
